@@ -1,0 +1,6 @@
+framework module Pods_Websockets {
+  umbrella header "Pods-Websockets-umbrella.h"
+
+  export *
+  module * { export * }
+}

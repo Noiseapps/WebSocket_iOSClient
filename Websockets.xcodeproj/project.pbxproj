@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4E4553FB12696B086E65A3 /* Pods_Websockets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C42F6CDB3FE823A4C80F03 /* Pods_Websockets.framework */; };
 		F112DC661EBE38F400501FB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112DC651EBE38F400501FB7 /* AppDelegate.swift */; };
 		F112DC681EBE38F400501FB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112DC671EBE38F400501FB7 /* ViewController.swift */; };
-		F112DC6B1EBE38F400501FB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F112DC691EBE38F400501FB7 /* Main.storyboard */; };
 		F112DC6D1EBE38F400501FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F112DC6C1EBE38F400501FB7 /* Assets.xcassets */; };
 		F112DC701EBE38F400501FB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F112DC6E1EBE38F400501FB7 /* LaunchScreen.storyboard */; };
+		F112DC781EBE391800501FB7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F112DC771EBE391800501FB7 /* ViewController.xib */; };
+		F112DC7B1EBE5CBB00501FB7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112DC791EBE5CBA00501FB7 /* ItemCell.swift */; };
+		F112DC7C1EBE5CBB00501FB7 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F112DC7A1EBE5CBA00501FB7 /* ItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12009D185FE99007E308D7A2 /* Pods-Websockets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Websockets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Websockets/Pods-Websockets.debug.xcconfig"; sourceTree = "<group>"; };
+		13C42F6CDB3FE823A4C80F03 /* Pods_Websockets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Websockets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4D3A194EB2E15D57013933C /* Pods-Websockets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Websockets.release.xcconfig"; path = "Pods/Target Support Files/Pods-Websockets/Pods-Websockets.release.xcconfig"; sourceTree = "<group>"; };
 		F112DC621EBE38F400501FB7 /* Websockets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Websockets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F112DC651EBE38F400501FB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F112DC671EBE38F400501FB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F112DC6A1EBE38F400501FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F112DC6C1EBE38F400501FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F112DC6F1EBE38F400501FB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F112DC711EBE38F500501FB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F112DC771EBE391800501FB7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		F112DC791EBE5CBA00501FB7 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		F112DC7A1EBE5CBA00501FB7 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E4E4553FB12696B086E65A3 /* Pods_Websockets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BD82EAF878C8063D31333CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13C42F6CDB3FE823A4C80F03 /* Pods_Websockets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0D54035DA0D2154A28813A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12009D185FE99007E308D7A2 /* Pods-Websockets.debug.xcconfig */,
+				E4D3A194EB2E15D57013933C /* Pods-Websockets.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F112DC591EBE38F400501FB7 = {
 			isa = PBXGroup;
 			children = (
 				F112DC641EBE38F400501FB7 /* Websockets */,
 				F112DC631EBE38F400501FB7 /* Products */,
+				E0D54035DA0D2154A28813A3 /* Pods */,
+				7BD82EAF878C8063D31333CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +84,9 @@
 			children = (
 				F112DC651EBE38F400501FB7 /* AppDelegate.swift */,
 				F112DC671EBE38F400501FB7 /* ViewController.swift */,
-				F112DC691EBE38F400501FB7 /* Main.storyboard */,
+				F112DC771EBE391800501FB7 /* ViewController.xib */,
+				F112DC791EBE5CBA00501FB7 /* ItemCell.swift */,
+				F112DC7A1EBE5CBA00501FB7 /* ItemCell.xib */,
 				F112DC6C1EBE38F400501FB7 /* Assets.xcassets */,
 				F112DC6E1EBE38F400501FB7 /* LaunchScreen.storyboard */,
 				F112DC711EBE38F500501FB7 /* Info.plist */,
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F112DC741EBE38F500501FB7 /* Build configuration list for PBXNativeTarget "Websockets" */;
 			buildPhases = (
+				3EAFACFA6E163A113A00272D /* [CP] Check Pods Manifest.lock */,
 				F112DC5E1EBE38F400501FB7 /* Sources */,
 				F112DC5F1EBE38F400501FB7 /* Frameworks */,
 				F112DC601EBE38F400501FB7 /* Resources */,
+				85BA905309ADA1BB4D2050DE /* [CP] Embed Pods Frameworks */,
+				61D644A57419544CB0177B0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +129,7 @@
 				TargetAttributes = {
 					F112DC611EBE38F400501FB7 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 774QDYXW49;
+						DevelopmentTeam = 52SK3QZWLR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,13 +157,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F112DC7C1EBE5CBB00501FB7 /* ItemCell.xib in Resources */,
 				F112DC701EBE38F400501FB7 /* LaunchScreen.storyboard in Resources */,
 				F112DC6D1EBE38F400501FB7 /* Assets.xcassets in Resources */,
-				F112DC6B1EBE38F400501FB7 /* Main.storyboard in Resources */,
+				F112DC781EBE391800501FB7 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EAFACFA6E163A113A00272D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61D644A57419544CB0177B0F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Websockets/Pods-Websockets-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85BA905309ADA1BB4D2050DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Websockets/Pods-Websockets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F112DC5E1EBE38F400501FB7 /* Sources */ = {
@@ -139,20 +221,13 @@
 			files = (
 				F112DC681EBE38F400501FB7 /* ViewController.swift in Sources */,
 				F112DC661EBE38F400501FB7 /* AppDelegate.swift in Sources */,
+				F112DC7B1EBE5CBB00501FB7 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F112DC691EBE38F400501FB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F112DC6A1EBE38F400501FB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F112DC6E1EBE38F400501FB7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -259,12 +334,13 @@
 		};
 		F112DC751EBE38F500501FB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12009D185FE99007E308D7A2 /* Pods-Websockets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 774QDYXW49;
+				DEVELOPMENT_TEAM = 52SK3QZWLR;
 				INFOPLIST_FILE = Websockets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pl.exaco.Websockets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noiseapps.Websockets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,12 +348,13 @@
 		};
 		F112DC761EBE38F500501FB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D3A194EB2E15D57013933C /* Pods-Websockets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 774QDYXW49;
+				DEVELOPMENT_TEAM = 52SK3QZWLR;
 				INFOPLIST_FILE = Websockets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pl.exaco.Websockets;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noiseapps.Websockets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +379,7 @@
 				F112DC761EBE38F500501FB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

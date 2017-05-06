@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="Websockets" customModuleProvider="target">
+            <connections>
+                <outlet property="connectButton" destination="MAs-XZ-ZJJ" id="lml-IO-dtW"/>
+                <outlet property="disconnectedMask" destination="8YH-H5-RWX" id="rVP-uk-bJe"/>
+                <outlet property="messageInput" destination="Xby-GD-ju7" id="tyu-XQ-xaC"/>
+                <outlet property="nickname" destination="bJ3-S6-n8m" id="9YX-75-uI8"/>
+                <outlet property="responseLabel" destination="sG8-jT-wnh" id="Ude-dp-K8Y"/>
+                <outlet property="sendButton" destination="LXe-jJ-UBa" id="Ubt-IY-e4r"/>
+                <outlet property="view" destination="iN0-l3-epB" id="n1D-j3-iPa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4H-NA-eRg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xby-GD-ju7">
+                            <rect key="frame" x="16" y="16" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXe-jJ-UBa">
+                            <rect key="frame" x="16" y="62" width="343" height="30"/>
+                            <state key="normal" title="Send hello message"/>
+                            <connections>
+                                <action selector="sendSocketMessage:" destination="-1" eventType="touchUpInside" id="xDs-yJ-UfF"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sG8-jT-wnh">
+                            <rect key="frame" x="16" y="108" width="343" height="449"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="oV6-du-d2f"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPH-Tk-1TO">
+                            <rect key="frame" x="16" y="565" width="343" height="30"/>
+                            <state key="normal" title="Disconnect"/>
+                            <connections>
+                                <action selector="disconnect:" destination="-1" eventType="touchUpInside" id="xo3-fD-GGI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="dPH-Tk-1TO" secondAttribute="bottom" constant="8" id="1l4-Xn-bwU"/>
+                        <constraint firstAttribute="trailing" secondItem="sG8-jT-wnh" secondAttribute="trailing" constant="16" id="2gr-dV-J7u"/>
+                        <constraint firstAttribute="trailing" secondItem="Xby-GD-ju7" secondAttribute="trailing" constant="16" id="4oo-wV-q0h"/>
+                        <constraint firstItem="LXe-jJ-UBa" firstAttribute="leading" secondItem="d4H-NA-eRg" secondAttribute="leading" constant="16" id="6fU-ig-woX"/>
+                        <constraint firstItem="Xby-GD-ju7" firstAttribute="top" secondItem="d4H-NA-eRg" secondAttribute="top" constant="16" id="CoI-pL-B6w"/>
+                        <constraint firstItem="Xby-GD-ju7" firstAttribute="leading" secondItem="d4H-NA-eRg" secondAttribute="leading" constant="16" id="KgH-YU-LaX"/>
+                        <constraint firstItem="LXe-jJ-UBa" firstAttribute="top" secondItem="Xby-GD-ju7" secondAttribute="bottom" constant="16" id="Mih-BH-wZm"/>
+                        <constraint firstItem="sG8-jT-wnh" firstAttribute="top" secondItem="LXe-jJ-UBa" secondAttribute="bottom" constant="16" id="UWn-BN-YsY"/>
+                        <constraint firstAttribute="trailing" secondItem="dPH-Tk-1TO" secondAttribute="trailing" constant="16" id="VdD-UA-UPO"/>
+                        <constraint firstItem="dPH-Tk-1TO" firstAttribute="leading" secondItem="d4H-NA-eRg" secondAttribute="leading" constant="16" id="W84-Sm-u3n"/>
+                        <constraint firstItem="sG8-jT-wnh" firstAttribute="leading" secondItem="d4H-NA-eRg" secondAttribute="leading" constant="16" id="aB3-n9-QVa"/>
+                        <constraint firstItem="dPH-Tk-1TO" firstAttribute="top" secondItem="sG8-jT-wnh" secondAttribute="bottom" constant="8" id="e9T-bR-wMp"/>
+                        <constraint firstAttribute="trailing" secondItem="LXe-jJ-UBa" secondAttribute="trailing" constant="16" id="gL8-Yb-e66"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="eGn-QV-zeX" appends="YES" id="aQg-gf-oj7"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8YH-H5-RWX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJ3-S6-n8m">
+                            <rect key="frame" x="16" y="32" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAs-XZ-ZJJ">
+                            <rect key="frame" x="16" y="70" width="343" height="30"/>
+                            <state key="normal" title="Connect"/>
+                            <connections>
+                                <action selector="onConnectButton:" destination="-1" eventType="touchUpInside" id="3QO-b0-ijq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="bJ3-S6-n8m" firstAttribute="leading" secondItem="8YH-H5-RWX" secondAttribute="leading" constant="16" id="ARU-A8-1F9"/>
+                        <constraint firstAttribute="trailing" secondItem="bJ3-S6-n8m" secondAttribute="trailing" constant="16" id="EXq-NG-IAB"/>
+                        <constraint firstItem="bJ3-S6-n8m" firstAttribute="top" secondItem="8YH-H5-RWX" secondAttribute="top" constant="32" id="HaO-6r-ZbK"/>
+                        <constraint firstItem="MAs-XZ-ZJJ" firstAttribute="leading" secondItem="8YH-H5-RWX" secondAttribute="leading" constant="16" id="ffF-SD-UkY"/>
+                        <constraint firstAttribute="trailing" secondItem="MAs-XZ-ZJJ" secondAttribute="trailing" constant="16" id="nQx-A8-gcf"/>
+                        <constraint firstItem="MAs-XZ-ZJJ" firstAttribute="top" secondItem="bJ3-S6-n8m" secondAttribute="bottom" constant="8" id="nca-Pf-GZx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8YH-H5-RWX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6aS-Ue-zon"/>
+                <constraint firstItem="d4H-NA-eRg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8xl-cA-JuM"/>
+                <constraint firstAttribute="trailing" secondItem="8YH-H5-RWX" secondAttribute="trailing" id="Ij2-dx-gWF"/>
+                <constraint firstItem="d4H-NA-eRg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Jhs-BY-8aY"/>
+                <constraint firstAttribute="trailing" secondItem="d4H-NA-eRg" secondAttribute="trailing" id="KMv-ap-H7J"/>
+                <constraint firstAttribute="bottom" secondItem="d4H-NA-eRg" secondAttribute="bottom" id="Q93-Zc-6Qf"/>
+                <constraint firstAttribute="bottom" secondItem="8YH-H5-RWX" secondAttribute="bottom" id="my4-2k-CYm"/>
+                <constraint firstItem="8YH-H5-RWX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ng0-il-8Fg"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="33.5" y="145.5"/>
+        </view>
+        <tapGestureRecognizer cancelsTouchesInView="NO" delaysTouchesBegan="YES" id="eGn-QV-zeX">
+            <connections>
+                <action selector="onTap:" destination="-1" id="k5B-fL-13k"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
