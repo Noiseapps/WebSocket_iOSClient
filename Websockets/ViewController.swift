@@ -31,16 +31,16 @@ class ViewController: UIViewController, SRWebSocketDelegate, UITableViewDataSour
     @IBOutlet weak var connectButton: UIButton!
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var responseLabel: UITableView!
+    @IBOutlet weak var messagesList: UITableView!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var messageInput: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "WebSockets testflight"
-        self.responseLabel.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
-        self.responseLabel.estimatedRowHeight = 90
-        self.responseLabel.rowHeight = UITableViewAutomaticDimension
+        self.messagesList.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
+        self.messagesList.estimatedRowHeight = 90
+        self.messagesList.rowHeight = UITableViewAutomaticDimension
     }
     
     func convertToDictionary(text: String) -> [String: Any]? {
@@ -135,7 +135,9 @@ class ViewController: UIViewController, SRWebSocketDelegate, UITableViewDataSour
     func addItem(title: String, message: String? = nil) {
         NSLog("\(title) - \(message ?? "")")
         items.append(Message(title: title, message: message))
-        self.responseLabel.insertRows(at: [IndexPath(row: items.count - 1, section: 0)], with: .left)
+        let indexPath = IndexPath(row: items.count - 1, section: 0)
+        self.messagesList.insertRows(at: [indexPath], with: .left)
+        self.messagesList.scrollToRow(at: indexPath, at: .bottom, animated: true)
     }
     
     //MARK: - tableview delegate

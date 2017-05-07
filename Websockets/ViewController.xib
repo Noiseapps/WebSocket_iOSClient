@@ -15,8 +15,8 @@
                 <outlet property="connectButton" destination="MAs-XZ-ZJJ" id="lml-IO-dtW"/>
                 <outlet property="disconnectedMask" destination="8YH-H5-RWX" id="rVP-uk-bJe"/>
                 <outlet property="messageInput" destination="Xby-GD-ju7" id="tyu-XQ-xaC"/>
+                <outlet property="messagesList" destination="sG8-jT-wnh" id="eWA-jg-Rnq"/>
                 <outlet property="nickname" destination="bJ3-S6-n8m" id="9YX-75-uI8"/>
-                <outlet property="responseLabel" destination="sG8-jT-wnh" id="Ude-dp-K8Y"/>
                 <outlet property="sendButton" destination="LXe-jJ-UBa" id="Ubt-IY-e4r"/>
                 <outlet property="serverAddress" destination="OcP-r9-BdN" id="UuT-LU-VIH"/>
                 <outlet property="statusLabel" destination="X7d-2u-A0b" id="iZi-pi-iDh"/>
