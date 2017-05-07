@@ -74,6 +74,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <outlet property="dataSource" destination="-1" id="oV6-du-d2f"/>
+                                <outlet property="delegate" destination="-1" id="r6M-Dq-dTA"/>
                                 <outletCollection property="gestureRecognizers" destination="eGn-QV-zeX" appends="YES" id="lQT-2u-c8Y"/>
                             </connections>
                         </tableView>

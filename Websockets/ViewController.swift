@@ -19,7 +19,7 @@ class Message {
     }
 }
 
-class ViewController: UIViewController, SRWebSocketDelegate, UITableViewDataSource {
+class ViewController: UIViewController, SRWebSocketDelegate, UITableViewDataSource, UITableViewDelegate {
     
     var socket : SRWebSocket?
     var items : Array<Message> = []
@@ -39,8 +39,8 @@ class ViewController: UIViewController, SRWebSocketDelegate, UITableViewDataSour
         super.viewDidLoad()
         self.title = "WebSockets testflight"
         self.messagesList.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
-        self.messagesList.estimatedRowHeight = 90
-        self.messagesList.rowHeight = UITableViewAutomaticDimension
+//        self.messagesList.estimatedRowHeight = 60
+//        self.messagesList.rowHeight = 60
     }
     
     func convertToDictionary(text: String) -> [String: Any]? {
@@ -133,11 +133,15 @@ class ViewController: UIViewController, SRWebSocketDelegate, UITableViewDataSour
     }
     
     func addItem(title: String, message: String? = nil) {
-        NSLog("\(title) - \(message ?? "")")
-        items.append(Message(title: title, message: message))
-        let indexPath = IndexPath(row: items.count - 1, section: 0)
-        self.messagesList.insertRows(at: [indexPath], with: .left)
-        self.messagesList.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        DispatchQueue.main.async(execute: {
+            NSLog("\(title) - \(message ?? "")")
+            self.items.append(Message(title: title, message: message))
+            let indexPath = IndexPath(row: self.items.count - 1, section: 0)
+//            self.messagesList.beginUpdates()
+            self.messagesList.insertRows(at: [indexPath], with: .top)
+//            self.messagesList.endUpdates()
+            self.messagesList.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        })
     }
     
     //MARK: - tableview delegate
@@ -150,6 +154,12 @@ class ViewController: UIViewController, SRWebSocketDelegate, UITableViewDataSour
         let cell : ItemCell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         cell.loadFromData(items[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let data = items[indexPath.row]
+        let content = "\(data.title) - \(data.message ?? "")"
+        return content.height(withConstrainedWidth: self.view.frame.width - 32, font: UIFont.systemFont(ofSize: 13)) + 32
     }
     
     //MARK: - websocket delegate

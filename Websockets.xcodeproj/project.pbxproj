@@ -15,6 +15,7 @@
 		F112DC781EBE391800501FB7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F112DC771EBE391800501FB7 /* ViewController.xib */; };
 		F112DC7B1EBE5CBB00501FB7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112DC791EBE5CBA00501FB7 /* ItemCell.swift */; };
 		F112DC7C1EBE5CBB00501FB7 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F112DC7A1EBE5CBA00501FB7 /* ItemCell.xib */; };
+		F1A8CCEE1EBFCACC003FE82A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A8CCED1EBFCACC003FE82A /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F112DC771EBE391800501FB7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		F112DC791EBE5CBA00501FB7 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		F112DC7A1EBE5CBA00501FB7 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		F1A8CCED1EBFCACC003FE82A /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				F112DC6C1EBE38F400501FB7 /* Assets.xcassets */,
 				F112DC6E1EBE38F400501FB7 /* LaunchScreen.storyboard */,
 				F112DC711EBE38F500501FB7 /* Info.plist */,
+				F1A8CCED1EBFCACC003FE82A /* StringExtension.swift */,
 			);
 			path = Websockets;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				F112DC681EBE38F400501FB7 /* ViewController.swift in Sources */,
 				F112DC661EBE38F400501FB7 /* AppDelegate.swift in Sources */,
 				F112DC7B1EBE5CBB00501FB7 /* ItemCell.swift in Sources */,
+				F1A8CCEE1EBFCACC003FE82A /* StringExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
